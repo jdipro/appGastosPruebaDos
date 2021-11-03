@@ -1,0 +1,27 @@
+/*Las etiquetas de clase se llaman con . */
+/*Los ID se llaman con #*/
+/*Al poner las etiquetas seguidas , puedo sumarlas*/
+
+td, 
+th{ 
+    text-align: center;
+    border: solid red 1px;
+}
+
+.tableFormat table {
+    margin: 0 auto;
+}
+
+h1{
+    text-align: center;
+}
+
+form{
+     text-align: center;
+} 
+
+
+#botonDeEnvio{ 
+    font-size: 16px; 
+}
+
