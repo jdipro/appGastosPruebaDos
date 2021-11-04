@@ -14,82 +14,85 @@
 
 <body>
     <h1>App para gastos</h1>
-    <div class="row"> <!--Si muevo los div grales cambio las cosas de izq a der-->
-        <div class="col l5 offset-l1 s12"> <!-- class "." para centrar la tabla en el navegador. En Stile-->
+    <div class="row">
+        <!--Si muevo los div grales cambio las cosas de izq a der-->
+        <div class="col l5 offset-l1 s12">
+            <!-- class "." para centrar la tabla en el navegador. En Stile-->
             <table id="transactionTable">
                 <caption>Transacciones</caption>
                 <thead>
-                    <tr> <!--C/ tr representa una fila-->
-                        <th scope="col"> <!--T=table H=header (crea Columnas)-->
-                        Tipo
+                    <tr>
+                        <!--C/ tr representa una fila-->
+                        <th scope="col">
+                            <!--T=table H=header (crea Columnas)-->
+                            Tipo
                         </th>
                         <th scope="col">Descripción</th>
                         <th scope="col">Monto</th>
                         <th scope="col">Categoría</th>
                         <th scope="col">Eliminar</th>
                     </tr>
-                <!--C/ tr representa una fila -con 1 ejemplo es suficiente- -->
-                <!--<td>Suledo</td> T=table D=data (crea Celdas, aquí se borro)-->
-                </thead>      
-            </table>        
+                    <!--C/ tr representa una fila -con 1 ejemplo es suficiente- -->
+                    <!--<td>Suledo</td> T=table D=data (crea Celdas, aquí se borro)-->
+                </thead>
+            </table>
         </div>
 
         <div class="col l5 s12">
-            <div class="col s8 offset-s2">       
+            <div class="col s8 offset-s2">
                 <form id="transactionForm">
 
-             
-                 <div class="formField">
-                    <span>Transaccion</span>
-    <!--La clase es un atributo de una etiqueta HTML, cua' la llamamos es con un "." delante -->                   
-    <!--Salto de línea directo -> br entre c/línea pero tiene consecuencias.-->
-    <!--Al poner el = name a los radios lo obligo a ser o uno u otro-->
-    <!--Los botones tienen que tener un comportamiento, value: ingreso-egreso | al
-    poner checked en el input ingreso, marca que ese es el estado por defecto para q quede luego del reset-->
-                    <p>
-                        <label>
-                            <input value="Ingreso" class="with-gap" name="transactionType" type="radio" checked />
-                            <span>Ingreso</span>
-                        </label>
-                        <label>
-                            <input value="Egreso" class="with-gap" name="transactionType" type="radio"/>
-                            <span>Engreso</span>
-                        </label>
-                    </p> 
-                </div> 
 
-                <!--Si saco los col s6 me toma todo el ancho de la columna general (que es s6 con respecto al total)-->
-                <div class="input-field col s6">  
-                    <label for="transactionDescription">Descripción</label>
-                    <input class="validate" type="text" id="transactionDescription" name="transactionDescription">
-                </div>
-                <div class="input-field col s6">
-                    <label for="transactionAmount">Monto</label>
-                    <input min = "0" required type="number" id="transactionAmount" name="transactionAmount" >
-                </div>
-                <div class="formField">             
-                    <label for="transactionCategory">Categoria</label>
-                    <select class="browser-default" id="transactionCategory" name="transactionCategory">
-                    </select>
-                </div>
-        <!--Botton, añade una nueva fila al final y la llena c/datos-->
-                <div class="formField">
-                    <button class="btn waves-effect waves-light" type="submit" name="action">Añadir    
-                </div>  
-                
-             
+                    <div class="formField">
+                        <span>Transaccion</span>
+                        <!--La clase es un atributo de una etiqueta HTML, cua' la llamamos es con un "." delante -->
+                        <!--Salto de línea directo -> br entre c/línea pero tiene consecuencias.-->
+                        <!--Al poner el = name a los radios lo obligo a ser o uno u otro-->
+                        <!--Los botones tienen que tener un comportamiento, value: ingreso-egreso | al
+    poner checked en el input ingreso, marca que ese es el estado por defecto para q quede luego del reset-->
+                        <p>
+                            <label>
+                                <input value="Ingreso" class="with-gap" name="transactionType" type="radio" checked />
+                                <span>Ingreso</span>
+                            </label>
+                            <label>
+                                <input value="Egreso" class="with-gap" name="transactionType" type="radio" />
+                                <span>Engreso</span>
+                            </label>
+                        </p>
+                    </div>
+
+                    <!--Si saco los col s6 me toma todo el ancho de la columna general (que es s6 con respecto al total)-->
+                    <div class="input-field col s6">
+                        <label for="transactionDescription">Descripción</label>
+                        <input class="validate" type="text" id="transactionDescription" name="transactionDescription">
+                    </div>
+                    <div class="input-field col s6">
+                        <label for="transactionAmount">Monto</label>
+                        <input min="0" required type="number" id="transactionAmount" name="transactionAmount">
+                    </div>
+                    <div class="formField">
+                        <label for="transactionCategory">Categoria</label>
+                        <select class="browser-default" id="transactionCategory" name="transactionCategory">
+                        </select>
+                    </div>
+                    <!--Botton, añade una nueva fila al final y la llena c/datos-->
+                    <div class="formField">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Añadir
+                    </div>
+
+
                 </form>
-            </div>      
+            </div>
         </div>
-        
+
     </div>
 
     <!--Voy a poner el script de la framework online de la web de estilos:materializecss.com -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <!--La etiqueta Script va donde termina el body, ponemos el path entre " "--> 
+    <!--La etiqueta Script va donde termina el body, ponemos el path entre " "-->
     <script src=".\resources\js\scripts.js"></script>
 
 </body>
 
 </html>
-
